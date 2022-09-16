@@ -1,0 +1,42 @@
+﻿@{ 
+    var veiculo = ViewBag.veiculo;
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<form action="/veiculos/Excluir" method="post">
+    <div>
+        <input type="hidden" id="id" name="id"  value="@veiculo.Id"
+        <label for="nome"> Marca: </label>
+        <input type="text" id="nome" name="nome" readonly value="@veiculo.Nome" />
+    </div>
+    <div>
+        <label for="modelo"> Modelo: </label>
+        <input type="text" id="modelo" name="modelo" readonly value="@veiculo.Modelo" />
+    </div>
+    <div>
+        <label for="fabricacao"> Ano: </label>
+        <input type="text" id="fabricacao" name="fabricacao" readonly value="@veiculo.Fabricacao" />
+    </div>
+    <div>
+        <label for="cor"> Cor: </label>
+        <input type="text" id="cor" name="cor" readonly value="@veiculo.Cor"/>
+    </div>
+    <div>
+        <label for="combustivel"> Combustivel: </label>
+        <input type="text" id="combustivel" name="combustivel" readonly value="@veiculo.Combustivel"/>
+    </div>
+    <div>
+        <label for="automatico"> Automático: </label>
+        <input type="text" id="automatico" name="automatico" readonly value="@veiculo.Automatico" />
+    </div>
+    <div>
+        <label for="valor"> Valor: </label>
+        <input type="text" id="valor" name="valor" readonly value="@veiculo.Valor" />
+    </div>
+    <br />
+    <div class="button">
+        <button type="submit">Excluir</button>
+    </div>
+</form>

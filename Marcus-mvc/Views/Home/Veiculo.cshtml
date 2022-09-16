@@ -1,0 +1,37 @@
+﻿
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p><a class="btn btn-default" href="/Veiculos/Adicionar">Adicionar &raquo;</a></p>
+<br/> 
+<table>
+    <tr>
+        <th>Marca / Fabricante</th>
+        <th>Modelo</th>
+        <th>Ano <br /> Fabricação</th>
+        <th>Cor</th>
+        <th>Combustível</th>
+        <th>Automático</th>
+        <th>Valor</th>
+        <th>Ação</th>
+        <th>Ação</th>
+    </tr>
+    @foreach (var item in ViewBag.Lista)
+    {
+     <tr>
+
+         <td>@item.Nome</td>
+         <td>@item.Modelo</td>
+         <td>@item.Fabricacao</td>
+         <td>@item.Cor</td>
+         <td>@item.Combustivel</td>
+         <td>@item.Automatico</td>
+         <td>@item.Valor</td>
+         <td><a href="/Veiculos/Alterar/@item.Id">Alterar</a></td>
+         <td><a href="/Veiculos/Excluir/@item.Id">Excluir</a></td>
+         <t
+     </tr>   
+    }
+</table>
+
+<p>Use this area to provide additional information.</p>
