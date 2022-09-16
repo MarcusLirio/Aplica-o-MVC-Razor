@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Marcus_mvc.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
